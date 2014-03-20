@@ -1,0 +1,11 @@
+<b>Peliculas</b>
+<br>
+Cantidad de peliculas: <%= @movies.count %>
+
+<% @movies.each do |movie| %>
+	<br>
+	<%= movie.name %>
+
+<% end %>
+<br>
+<a href="/movies/new">Nuevo</a>
