@@ -1,0 +1,15 @@
+
+<% if @movie.errors.any? %>
+
+	<% @movie.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+<% end %>
+
+<form action="/movies<%= @movie.id ? '/'+@movie.id.to_s : '' %>" method="get">
+	
+	Nombre pelicula:
+	<input type="text" name="movie[name]" value="<%= @movie.name %>">
+	<br>
+	<input type="submit" name="commit" value="Guardar">
+</form>
