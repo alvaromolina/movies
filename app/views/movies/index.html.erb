@@ -7,6 +7,8 @@ Cantidad de peliculas: <%= @movies.count %>
 <table>
 	<tr>
 	<th>Pelicula</th>
+	<th>Rating</th>
+
 	<th>Reviews</th>
 
 	<th></th>
@@ -16,6 +18,9 @@ Cantidad de peliculas: <%= @movies.count %>
 	<tr>
 	<td>
 	<%= movie.name %>
+	</td>
+		<td>
+	<%= movie.rating %>
 	</td>
 	<td>
 	<% movie.reviews.each do |review| %>
