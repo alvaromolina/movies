@@ -1,11 +1,13 @@
 Movies::Application.routes.draw do
-  resources :libros
+  resources :books
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   get '/movies' => 'movies#index'
   get '/movies/new' => 'movies#new'
   get '/movies/:id' => 'movies#edit'
+  get '/movies/delete/:id' => 'movies#delete'
+
   post '/movies' => 'movies#create'
   post '/movies/:id' => 'movies#update'
   # You can have the root of your site routed with "root"

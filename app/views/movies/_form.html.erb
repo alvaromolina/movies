@@ -6,7 +6,7 @@
       <% end %>
 <% end %>
 
-<form action="/movies<%= @movie.id ? '/'+@movie.id.to_s : '' %>" method="get">
+<form action="/movies<%= @movie.id ? '/'+@movie.id.to_s : '' %>" method="post">
 	
 	Nombre pelicula:
 	<input type="text" name="movie[name]" value="<%= @movie.name %>">

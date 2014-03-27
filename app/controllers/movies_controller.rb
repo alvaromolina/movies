@@ -42,6 +42,15 @@ class MoviesController < ApplicationController
 		
 	end
 
+	def delete
+		@movie = Movie.find(params[:id])
+		if @movie.destroy
+			redirect_to '/', notice: 'La pelicula ha sido borrada exitosamente'
+		else
+			redirect_to '/', notice: 'No se pudo borrar la pelicula'
+		end
+	end 
+
 
 
 end
